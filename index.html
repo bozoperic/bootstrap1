@@ -7,8 +7,6 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Naš custom CSS dolazi NAKON Bootstrapa -->
-  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
@@ -68,12 +66,163 @@
     =================================================
     ================================================= -->
 
-  <!-- OVDJE PIŠI SVOJ KOD -->
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Kavica</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#ponuda">Ponuda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#onama">O nama</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#kontakt">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
+  <!-- HERO SEKCIJA -->
+  <section class="py-5 bg-dark text-light text-center">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1 class="display-4 fw-bold mb-3">Dobrodošli u <span class="text-warning">Kavicu</span></h1>
+          <p class="lead mb-4">
+            Mjesto gdje miris svježe mljevene kave i topla atmosfera
+            započinju svaki dan na najbolji mogući način.
+          </p>
+          <a href="#ponuda" class="btn btn-outline-light btn-lg px-4">
+            Pogledaj ponudu
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- PONUDA - KARTICE -->
+  <section id="ponuda" class="py-5">
+    <div class="container">
+      <div class="row mb-4 text-center">
+        <div class="col">
+          <h2 class="fw-bold">Naša ponuda kave</h2>
+          <p class="text-muted mb-0">Odaberi savršenu šalicu za svoj trenutak odmora.</p>
+        </div>
+      </div>
 
+      <div class="row g-4">
+        <!-- Espresso -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Espresso</h5>
+              <p class="card-text flex-grow-1">
+                Klasičan, snažan espresso s bogatom cremom za pravi jutarnji udar energije.
+              </p>
+              <p class="fw-semibold mb-3">15,00 kn</p>
+              <a href="#kontakt" class="btn btn-outline-primary mt-auto">Naruči</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cappuccino -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Cappuccino</h5>
+              <p class="card-text flex-grow-1">
+                Savršena kombinacija espressa, mlijeka i pjene, popularna u svako doba dana.
+              </p>
+              <p class="fw-semibold mb-3">18,00 kn</p>
+              <a href="#kontakt" class="btn btn-outline-primary mt-auto">Naruči</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Latte -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Latte</h5>
+              <p class="card-text flex-grow-1">
+                Nježan i kremast napitak s puno mlijeka, idealan za duge kave s društvom.
+              </p>
+              <p class="fw-semibold mb-3">20,00 kn</p>
+              <a href="#kontakt" class="btn btn-outline-primary mt-auto">Naruči</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O NAMA -->
+  <section id="onama" class="py-5 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-3 text-center">O nama</h2>
+          <p class="text-muted text-center mb-0">
+            Kavica je mali kvartovski kafić posvećen vrhunskoj kavi i opuštenoj atmosferi.
+            Pažljivo biramo zrna od lokalnih pržionica i svaku šalicu pripremamo s puno pažnje,
+            kako bi tvoj trenutak pauze zaista bio poseban.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-3 text-center">Kontakt</h2>
+          <p class="text-center text-muted mb-4">
+            Imaš pitanje ili želiš rezervirati stol? Javi nam se!
+          </p>
+          <form class="row g-3">
+            <div class="col-12">
+              <label for="ime" class="form-label">Ime i prezime</label>
+              <input type="text" class="form-control" id="ime" placeholder="Tvoje ime">
+            </div>
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="ime@primjer.com">
+            </div>
+            <div class="col-12">
+              <label for="poruka" class="form-label">Poruka</label>
+              <textarea class="form-control" id="poruka" rows="4" placeholder="Tvoja poruka"></textarea>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-primary px-4">Pošalji</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-light py-3">
+    <div class="container text-center">
+      <small class="text-secondary">&copy; <span id="year"></span> Kavica. Sva prava pridržana.</small>
+    </div>
+  </footer>
   <!-- Bootstrap JS - mora biti na kraju, prije </body> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Postavi trenutnu godinu u footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
