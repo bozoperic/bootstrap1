@@ -12,66 +12,81 @@
 </head>
 <body>
 
-  <!-- ============================================================
-    ZADATAK - pročitaj sve prije nego počneš!
+  <!-- NAVBAR BEZ HAMBURGER MENIJA -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Kavica</a>
+      <ul class="navbar-nav ms-auto flex-row">
+        <li class="nav-item">
+          <a class="nav-link px-2" href="#">Ponuda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-2" href="#">O nama</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-2" href="#">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    Radiš landing page za fiktivni kafić "Kavica".
+  <!-- HERO SEKCIJA -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h1 class="display-4">Dobrodošli u Kavicu</h1>
+      <p class="lead">Najbolja kava u gradu uz ugodnu atmosferu.</p>
+      <a href="#" class="btn btn-primary">Pogledaj ponudu</a>
+    </div>
+  </section>
 
-    ŠTO TREBAŠ NAPRAVITI:
+  <!-- KARTICE -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
 
-    1. NAVBAR
-       - Logo/naziv kafića lijevo
-       - Linkovi desno: Ponuda, O nama, Kontakt
-       - Na mobilnom se navbar sklapa u hamburger izbornik
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Espresso</h5>
+              <p class="card-text">Intenzivna i jaka kava za pravi početak dana.</p>
+              <p><strong>2,00 €</strong></p>
+              <a href="#" class="btn btn-outline-primary">Naruči</a>
+            </div>
+          </div>
+        </div>
 
-    2. HERO SEKCIJA
-       - Veliki naslov i kratki opis kafića
-       - Jedan gumb (npr. "Pogledaj ponudu")
-       - Centriran sadržaj
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cappuccino</h5>
+              <p class="card-text">Savršen spoj espressa i pjenastog mlijeka.</p>
+              <p><strong>2,50 €</strong></p>
+              <a href="#" class="btn btn-outline-primary">Naruči</a>
+            </div>
+          </div>
+        </div>
 
-    3. KARTICE S PONUDOM (3 komada)
-       - Espresso, Cappuccino, Latte
-       - Svaka kartica: naziv, kratki opis, cijena, gumb
-       - Na MOBILNOM:  kartice jedna ispod druge (puna širina)
-       - Na TABLETU:   2 kartice u redu
-       - Na DESKTOPU:  sve 3 kartice u jednom redu
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body text-center">
+              <h5 class="card-title">Latte</h5>
+              <p class="card-text">Blaga i kremasta kava s puno mlijeka.</p>
+              <p><strong>3,00 €</strong></p>
+              <a href="#" class="btn btn-outline-primary">Naruči</a>
+            </div>
+          </div>
+        </div>
 
-    4. FOOTER
-       - Tamna pozadina, copyright tekst centriran
+      </div>
+    </div>
+  </section>
 
-    ============================================================
-    PRAVILA:
-    ✓ AI je dozvoljen
-    ✗ Svaku Bootstrap klasu koju koristiš moraš znati objasniti
-    ✗ Ne kopiraj tuđe rješenje bez razumijevanja
-
-    PITANJA ZA RAZMIŠLJANJE dok radiš:
-    - Što znači "col-lg-4"? Što je "lg"? Koliko iznosi u pikselima?
-    - Zašto koristimo "container" a ne "container-fluid"?
-    - Što bi se desilo bez "row" unutar "container"?
-    - Kako Bootstrap zna na kojoj veličini ekrana smo?
-
-    KORISNI LINKOVI:
-    - Bootstrap docs:  https://getbootstrap.com/docs/5.3
-    - Grid sistem:     https://getbootstrap.com/docs/5.3/layout/grid/
-    - Navbar:          https://getbootstrap.com/docs/5.3/components/navbar/
-    - Cards:           https://getbootstrap.com/docs/5.3/components/card/
-    ============================================================ -->
-
-    <!-- ==============================================
-    ==============================================
-    Nakon kloniranja a prije početka rada napravite
-    svoj branch: git checkout -b rjesenje/ime-prezime
-    Kad završite kod pošaljite ga tj pushajte na
-    sljedeći način:
-    git push --set-upstream origin rjesenje/ime-prezime
-    =================================================
-    ================================================= -->
-
-  <!-- OVDJE PIŠI SVOJ KOD -->
-
-
-
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p class="mb-0">© 2026 Kavica. Sva prava pridržana.</p>
+    </div>
+  </footer>
 
   <!-- Bootstrap JS - mora biti na kraju, prije </body> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
