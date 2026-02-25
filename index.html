@@ -71,7 +71,120 @@
   <!-- OVDJE PIŠI SVOJ KOD -->
 
 
+<!-- ================= NAVBAR ================= -->
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">☕</a>
+
+    <!-- Hamburger -->
+    <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Linkovi -->
+    <div class="collapse navbar-collapse justify-content-end" id="menu">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ponuda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">O nama</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="py-5 text-center bg-light">
+  <div class="container">
+
+    <h1 class="display-4"> Caffe Opatija </h1>
+    <p class="lead">
+      Najbolja kafa u gradu, savršeno mjesto za druženje i opuštanje.
+    </p>
+
+    <a href="#" class="btn btn-dark btn-lg">
+      Pogledaj ponudu
+    </a>
+
+  </div>
+</section>
+
+<!-- ================= PONUDA ================= -->
+
+<section class="py-5">
+  <div class="container">
+
+    <div class="row g-4">
+
+      <!-- Espresso -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 text-center">
+          <div class="card-body">
+            <h5 class="card-title">Espresso</h5>
+            <p class="card-text">
+              Klasična jaka kafa za pravi početak dana.
+            </p>
+            <img src="espresso.png" alt="" width="200px">
+            <p class="fw-bold">2.50 KM</p>
+            <a href="#" class="btn btn-outline-dark">Naruči</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cappuccino -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 text-center">
+          <div class="card-body">
+            <h5 class="card-title">Cappuccino</h5>
+            <p class="card-text">
+              Savršen balans espressa i kremaste pjene.
+            </p>
+            <img src="cappuccino.png" alt="" width="200px">
+            <p class="fw-bold">3.00 KM</p>
+            <a href="#" class="btn btn-outline-dark">Naruči</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Latte -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 text-center">
+          <div class="card-body">
+            <h5 class="card-title">Latte</h5>
+            <p class="card-text">
+              Blaga kafa s puno mlijeka za uživanje.
+            </p>
+            <img src="latte.png" alt="" width="250px">
+            <p class="fw-bold">3.50 KM</p>
+            <a href="#" class="btn btn-outline-dark">Naruči</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+    <p class="mb-0">© 2026 Caffe Opatija — Sva prava zadržana</p>
+  </div>
+</footer>
 
   <!-- Bootstrap JS - mora biti na kraju, prije </body> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
