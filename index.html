@@ -70,7 +70,162 @@
 
   <!-- OVDJE PIŠI SVOJ KOD -->
 
-pekmez
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIBAR - Najbolja kava u Mostaru</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-light">
+
+  <div class="container">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark rounded mt-3 shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold fs-4" href="#">LIBAR</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#ponuda">Ponuda</a></li>
+            <li class="nav-item"><a class="nav-link" href="#onama">O nama</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-bg text-center py-5 my-5 rounded-4 position-relative shadow-lg">
+      <div class="hero-overlay rounded-4"></div>
+      <div class="position-relative py-5">
+        <h1 class="display-3 fw-bold text-white text-shadow libar">Dobrodošli u LIBAR</h1> 
+        <p class="lead fs-4 text-white-emphasis mt-4 mb-5">
+          Najbolja kava u Mostaru – topli ambijent, prijateljski osmijesi i miris svježe mljevene kave.
+        </p>
+        <a href="#ponuda" class="btn btn-warning btn-lg px-5 py-3 fw-bold shadow">
+          Pogledaj ponudu
+        </a>
+      </div>
+    </section>
+
+    <!-- PONUDA -->
+    <section id="ponuda" class="my-5">
+      <h2 class="text-center mb-5 fw-bold display-6 text-dark">Naša ponuda</h2>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        <!-- Espresso -->
+        <div class="col">
+          <div class="card h-100 shadow border-0 rounded-4 overflow-hidden">
+            <img src="https://thumbs.dreamstime.com/b/espresso-10526527.jpg" class="card-img-top" alt="Espresso">
+            <div class="card-body text-center">
+              <h3 class="card-title fw-bold">Espresso</h3>
+              <p class="text-muted small">Kratki, jaki i punog okusa.</p>
+              <p class="fs-4 fw-bold text-warning">2,20 KM</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cappuccino -->
+        <div class="col">
+          <div class="card h-100 shadow border-0 rounded-4 overflow-hidden">
+            <img src="https://thumbs.dreamstime.com/b/close-up-heart-shaped-latte-art-creamy-coffee-foam-shot-beautifully-crafted-design-freshly-brewed-showcasing-intricate-426706863.jpg" class="card-img-top" alt="Cappuccino">
+            <div class="card-body text-center">
+              <h3 class="card-title fw-bold">Cappuccino</h3>
+              <p class="text-muted small">Savršena ravnoteža espressa i mlijeka.</p>
+              <p class="fs-4 fw-bold text-warning">3,80 KM</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Latte -->
+        <div class="col">
+          <div class="card h-100 shadow border-0 rounded-4 overflow-hidden">
+            <img src="https://thumbs.dreamstime.com/b/close-up-coffee-cup-showcasing-tulip-pattern-crafted-latte-art-creamy-design-contrasts-rich-dark-espresso-390196408.jpg" class="card-img-top" alt="Latte">
+            <div class="card-body text-center">
+              <h3 class="card-title fw-bold">Latte</h3>
+              <p class="text-muted small">Mekši okus i više mlijeka.</p>
+              <p class="fs-4 fw-bold text-warning">4,20 KM</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CAROUSEL -->
+    <section class="my-5">
+      <h2 class="text-center mb-4 fw-bold">Izdvojena ponuda</h2>
+
+      <div id="kavaCarousel" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel">
+        
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#kavaCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#kavaCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#kavaCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src="https://thumbs.dreamstime.com/b/espresso-10526527.jpg" class="d-block w-100" alt="Espresso">
+            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
+              <h3>Espresso</h3>
+              <p>2,20 KM</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://thumbs.dreamstime.com/b/close-up-heart-shaped-latte-art-creamy-coffee-foam-shot-beautifully-crafted-design-freshly-brewed-showcasing-intricate-426706863.jpg" class="d-block w-100" alt="Cappuccino">
+            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
+              <h3>Cappuccino</h3>
+              <p>3,80 KM</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://thumbs.dreamstime.com/b/close-up-coffee-cup-showcasing-tulip-pattern-crafted-latte-art-creamy-design-contrasts-rich-dark-espresso-390196408.jpg" class="d-block w-100" alt="Latte">
+            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
+              <h3>Latte</h3>
+              <p>4,20 KM</p>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#kavaCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#kavaCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-0 fs-5">© 2026 LIBAR – Sva prava pridržana | Napravio Luka Barun</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
 
 
   <!-- Bootstrap JS - mora biti na kraju, prije </body> -->
