@@ -7,10 +7,21 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Naš custom CSS dolazi NAKON Bootstrapa -->
-  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <style>
+    .order-btn {
+      transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+    }
+    .order-btn:hover,
+    .order-btn:focus-visible {
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+      color: #fff !important;
+    }
+  </style>
 </head>
-<body>
+<!-- bg-black: crna pozadina; text-light: svijetli tekst -->
+<body class="bg-black text-light">
 
   <!-- ============================================================
     ZADATAK - pročitaj sve prije nego počneš!
@@ -68,12 +79,308 @@
     =================================================
     ================================================= -->
 
-  <!-- OVDJE PIŠI SVOJ KOD -->
+  <!-- navbar container: širina; py-3: vertikalni razmak; col-lg-10 mx-auto: suzi sadržaj -->
+  <navbar class="container py-3">
+    <!-- row: grid red -->
+    <div class="row col-lg-10 mx-auto">
+      <!-- col-12 col-md-6: logo širina; text-center/text-md-start: poravnanje -->
+      <div class="col-12 col-md-6 text-center text-md-start">
+        <!-- fw-bold: bold; fs-4: veći tekst; text-light/text-decoration-none: vidljiv link bez crte -->
+        <a href="#hero" class="fw-bold fs-4 text-decoration-none text-light">Na Kavici sa Cappuccinom</a>
+      </div>
+      <!-- col-12 col-md-6: linkovi; d-flex: vodoravno; justify-content-*: centriraj/desno; gap-3: razmak; mt-*: razmak gore na manjim -->
+      <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end gap-3 mt-2 mt-md-0">
+        <!-- text-light/text-decoration-none: stil linka -->
+        <a href="#ponuda" class="text-light text-decoration-none">Ponuda</a>
+        <a href="#onama" class="text-light text-decoration-none">O nama</a>
+        <a href="#kontakt" class="text-light text-decoration-none">Kontakt</a>
+      </div>
+    </div>
+  </navbar>
 
+  <!-- py-*: vertikalni padding po breakpointu; background-image (style): slika kave -->
+  <section
+    id="hero"
+    class="py-4 py-sm-5 py-lg-5"
+    style="background-image: url('https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;"
+  >
+    <!-- container: širina + centriranje -->
+    <div class="container">
+      <!-- row: grid red; justify-content-center: centriraj stupac -->
+      <div class="row justify-content-center">
+        <!-- col-*: širina stupca po breakpointu; text-center: centrirani tekst; fade: JS animacija -->
+        <div class="col-12 col-md-8 col-lg-6 text-center fade">
+          <!-- bg-dark/bg-opacity-75: tamni overlay; rounded-3: zaobljeni rubovi; p-*: padding -->
+          <div class="bg-dark bg-opacity-75 rounded-3 p-3 p-sm-4 p-md-5">
+            <!-- display-*/fw-bold: veliki bold naslov; mb-3: razmak dolje -->
+            <h1 class="display-5 display-md-4 fw-bold mb-3">Dobrodošli Na Kavicu sa Cappuccinom</h1>
+            <!-- lead: veći tekst; text-secondary: siva; mb-4: razmak dolje -->
+            <p class="lead text-secondary mb-4">
+            Mjesto gdje miris svježe mljevene kave i topla atmosfera
+            stvaraju vašu novu omiljenu rutinu.
+            </p>
+            <!-- btn/btn-primary/btn-lg: gumb; px-*: horizontalni padding -->
+            <a href="#ponuda" class="btn btn-primary btn-lg px-4 px-md-5">
+            Pogledaj ponudu
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- py-*: vertikalni padding sekcije ponude -->
+  <section id="ponuda" class="py-4 py-md-5">
+    <!-- container: centrirani sadržaj -->
+    <div class="container">
+      <!-- text-center: centrirano; mb-*: razmak dolje; fade: animacija -->
+      <div class="text-center mb-3 mb-md-4 fade">
+        <!-- fw-bold: bold; mb-2: razmak -->
+        <h2 class="fw-bold mb-2">Naša ponuda kave</h2>
+        <!-- text-secondary: sivi tekst; mb-0: bez margine -->
+        <p class="text-secondary mb-0">Odaberi svoju omiljenu šalicu užitka.</p>
+      </div>
 
+      <!-- Bootstrap karusel umjesto 3 statične kartice -->
+      <div id="coffeeCarousel" class="carousel slide fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- ESPRESSO -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-8 col-lg-6 d-flex">
+                <div class="bg-light text-dark rounded-3 p-3 w-100 h-100 d-flex flex-column">
+                  <img
+                    src="https://images.pexels.com/photos/2396220/pexels-photo-2396220.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Espresso"
+                    style="height: 200px; object-fit: cover;"
+                  >
+                  <div class="mt-3 d-flex flex-column justify-content-between h-100">
+                    <div>
+                      <h3 class="fw-semibold mb-2">Espresso</h3>
+                      <p class="mb-2">
+                        Intenzivna, koncentrirana kava za one koji vole snažan okus
+                        u maloj šalici.
+                      </p>
+                      <p class="fw-semibold mb-3">Cijena: 1,50 €</p>
+                    </div>
+                    <div>
+                      <a href="#kontakt" class="order-btn d-block text-center border border-dark rounded py-2 text-dark text-decoration-none">
+                        Naruči Espresso
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <!-- CAPPUCCINO -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-8 col-lg-6 d-flex">
+                <div class="bg-light text-dark rounded-3 p-3 w-100 h-100 d-flex flex-column">
+                  <img
+                    src="https://images.pexels.com/photos/2615323/pexels-photo-2615323.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Cappuccino"
+                    style="height: 200px; object-fit: cover;"
+                  >
+                  <div class="mt-3 d-flex flex-column justify-content-between h-100">
+                    <div>
+                      <h3 class="fw-semibold mb-2">Cappuccino</h3>
+                      <p class="mb-2">
+                        Savršen omjer espressa, mlijeka i mliječne pjene za
+                        kremast doživljaj.
+                      </p>
+                      <p class="fw-semibold mb-3">Cijena: 2,20 €</p>
+                    </div>
+                    <div>
+                      <a href="#kontakt" class="order-btn d-block text-center border border-dark rounded py-2 text-dark text-decoration-none">
+                        Naruči Cappuccino
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- LATTE -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-8 col-lg-6 d-flex">
+                <div class="bg-light text-dark rounded-3 p-3 w-100 h-100 d-flex flex-column">
+                  <img
+                    src="https://images.pexels.com/photos/851555/pexels-photo-851555.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Latte"
+                    style="height: 200px; object-fit: cover;"
+                  >
+                  <div class="mt-3 d-flex flex-column justify-content-between h-100">
+                    <div>
+                      <h3 class="fw-semibold mb-2">Latte</h3>
+                      <p class="mb-2">
+                        Nježna kava s puno toplog mlijeka – idealna za
+                        opuštena jutra i duge razgovore.
+                      </p>
+                      <p class="fw-semibold mb-3">Cijena: 2,50 €</p>
+                    </div>
+                    <div>
+                      <a href="#kontakt" class="order-btn d-block text-center border border-dark rounded py-2 text-dark text-decoration-none">
+                        Naruči Latte
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kontrole karusela -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#coffeeCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Prethodna</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#coffeeCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Sljedeća</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- py-*: vertikalni padding sekcije "O nama" -->
+  <section id="onama" class="py-4 py-lg-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- col-*: širine po breakpointu; mb-*: razmak; fade: animacija; text-center/text-md-start: poravnanje -->
+        <div class="col-12 col-md-6 col-lg-6 mb-4 mb-md-0 fade text-center text-md-start">
+          <h2 class="fw-bold mb-3">O nama</h2>
+          <p class="text-secondary mb-3">
+            Kavica je mali kvartovski kafić u kojem se spajaju miris svježe
+            pržene kave, topla atmosfera i prijateljsko osoblje.
+          </p>
+          <p class="text-secondary mb-0">
+            Svaku šalicu pripremamo s pažnjom, koristeći kvalitetna zrna i
+            moderne metode pripreme, kako bi tvoj dan počeo (ili završio)
+            baš kako treba.
+          </p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 text-center fade">
+          <!-- img-fluid: responsive slika; rounded: zaobljeni rubovi; shadow: sjena -->
+          <img
+            src="https://images.pexels.com/photos/1002740/pexels-photo-1002740.jpeg"
+            alt="Šalica kave na stolu"
+            class="img-fluid rounded shadow"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- py-*: vertikalni padding sekcije "Kontakt" -->
+  <section id="kontakt" class="py-4 py-md-5">
+    <div class="container">
+      <!-- row: dvije kolone – lijevo zanimljivosti, desno kontakti -->
+      <div class="row">
+        <!-- col-12 col-md-6: zanimljivosti; text-start: lijevo poravnanje; mb-4: razmak dolje na manjim -->
+        <div class="col-12 col-md-6 mb-4 mb-md-0">
+          <h2 class="fw-bold mb-3">Zanimljivosti</h2>
+          <p class="text-secondary mb-2">
+            Na Kavici sa Cappuccinom otvoren je 2015. godine kao mali obiteljski kafić u srcu kvarta.
+          </p>
+          <p class="text-secondary mb-2">
+            Ideja je nastala nakon putovanja po Italiji, gdje su vlasnici otkrili savršeni omjer espressa i mliječne pjene.
+          </p>
+          <p class="text-secondary mb-0">
+            Svakog petka organiziramo mini "coffee tasting" večeri na kojima gosti mogu probati nove blendove kave.
+          </p>
+        </div>
+        <!-- col-12 col-md-6: kontakti; text-md-end: desno poravnanje na većim ekranima -->
+        <div class="col-12 col-md-6 text-md-end">
+          <h2 class="fw-bold mb-3">Kontakt</h2>
+          <!-- d-grid gap-2: vertikalni razmak; text-secondary: sivi tekst -->
+          <div class="d-grid gap-2 text-secondary">
+            <p class="mb-0">
+              <span class="fw-semibold text-light">Adresa:</span>
+              Ulica Tute Bugarinog 67, 80101 Livno
+            </p>
+            <p class="mb-0">
+              <span class="fw-semibold text-light">Telefon:</span>
+              <!-- link-light: svijetli link; text-decoration-none: bez crte -->
+              <a class="link-light text-decoration-none" href="tel:+385911234567">+387 63 069 390</a>
+            </p>
+            <p class="mb-0">
+              <span class="fw-semibold text-light">Email:</span>
+              <a class="link-light text-decoration-none" href="mailto:info@kavica.hr">info@kavicasacappuccinom.bih</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- bg-black: crni footer; text-secondary: sivi tekst; text-center: centrirano; py-*/mt-*: razmak; border-*: linija -->
+  <footer class="bg-black text-secondary text-center py-3 py-md-4 mt-4 mt-lg-5 border-top border-secondary">
+    <small>&copy; 2026 Kavica sa cappuccinom – Sva prava pridržana.</small>
+  </footer>
   <!-- Bootstrap JS - mora biti na kraju, prije </body> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!--
+    MALI JAVASCRIPT DODACI
+
+    1) Animacija "fade-in" za elemente koji imaju klasu "fade"
+       - Bootstrap već definira:
+         .fade  → element je proziran
+         .show  → konačno stanje (vidljivo)
+       - Kad preko JS-a dodamo "show" na element koji već ima "fade",
+         Bootstrap CSS odradi prijelaz (animaciju).
+
+    2) Glatko skrolanje do sekcije kada kliknemo na link u navbaru
+       - umjesto instant skoka, koristimo "scrollIntoView" s "behavior: 'smooth'".
+  -->
+  <script>
+    // Animacija: kada se element pojavi u viewportu, dodaj mu klasu "show"
+    document.addEventListener('DOMContentLoaded', function () {
+      var fadeElements = document.querySelectorAll('.fade');
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show'); // Bootstrap koristi .fade + .show za prijelaz
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+
+        fadeElements.forEach(function (el) {
+          observer.observe(el);
+        });
+      } else {
+        // Fallback: ako preglednik ne podržava IntersectionObserver, odmah prikaži sve
+        fadeElements.forEach(function (el) {
+          el.classList.add('show');
+        });
+      }
+
+      // Glatko skrolanje za sve linkove koji vode na ID na stranici (#ponuda, #onama, #kontakt)
+      var navLinks = document.querySelectorAll('a[href^="#"]');
+
+      navLinks.forEach(function (link) {
+        var href = link.getAttribute('href');
+
+        if (href && href.startsWith('#') && href.length > 1) {
+          link.addEventListener('click', function (event) {
+            var target = document.querySelector(href);
+            if (target) {
+              event.preventDefault();
+              target.scrollIntoView({ behavior: 'smooth' });
+            }
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
